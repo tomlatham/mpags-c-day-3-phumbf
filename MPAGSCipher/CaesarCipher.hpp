@@ -5,12 +5,20 @@
 #include<vector>
 #include<string>
 
-
+#include "CaesarMode.hpp"
 
 class CaesarCipher {
 public:
+    /**Can create a new instance of CaesarCipher using a key. 
+ * \param key is the value for the key
+ * */
     CaesarCipher(const size_t key);
-    std::string applyCipher(const std::string& inputText, const bool encrypt);
+    
+/**Applies the cipher after inputting text and encryption boolean
+ * \param inputText is the text to be encrypted or decrypted
+ * \param encrypt is a boolean which decides whether to e3ncrypt or decrypt.
+ * */
+    std::string applyCipher(const std::string& inputText, const CipherMode encrypt);
     
     
 private:

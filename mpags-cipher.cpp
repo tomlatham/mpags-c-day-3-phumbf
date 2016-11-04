@@ -9,6 +9,7 @@
 #include "ProcessCommandLine.hpp"
 #include "RunCaesarCipher.hpp"
 #include "CaesarCipher.hpp"
+#include "CaesarMode.hpp"
   
 
 
@@ -20,7 +21,7 @@ int main(int argc, char* argv[])
 
   // Options that might be set by the command-line arguments
   
-  ProgramSettings settings { false, false, "", "", "", true};
+  ProgramSettings settings { false, false, "", "", "", CipherMode::encrypt};
   
   // Process command line arguments
   bool cmdLineStatus { processCommandLine(cmdLineArgs, settings) };
