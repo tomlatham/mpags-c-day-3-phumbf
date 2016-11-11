@@ -2,12 +2,20 @@
 #define MPAGSCIPHER_CAESARMODE_HPP
 
 
-///The encryption/decrytion mode
+/**
+ * \file CaesarMode.hpp
+ * \brief Contains the declaration of the CipherMode enumeration
+ */
+
+/**
+ * \enum CipherMode
+ * \brief Enumeration to define the modes in which the ciphers can operate
+ */
 enum class CipherMode{
-    encrypt, ///Encryption mode
-    decrypt  ///Decryption mode
+    Encrypt, ///< Encryption mode
+    Decrypt  ///< Decryption mode
 };
 
 
 
-#endif // MPAGSCIPHER_MPAGSCIPHER_CAESARCIPHER_HPP
+#endif // MPAGSCIPHER_CAESARMODE_HPP

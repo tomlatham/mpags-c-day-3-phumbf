@@ -10,13 +10,14 @@
 TEST_CASE("Characters are uppercased", "[alphanumeric]") {
   
   const std::vector<char> loweralphabet_ = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-  const std::vector<char> alphabet_ = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+  const std::vector<char> upperalphabet_ = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
   std::string out_text{""};
   
   for(int i=0; i<26; i++)
   {
-    out_text = alphabet_[i];
+    out_text = upperalphabet_[i];
     REQUIRE( transformChar(loweralphabet_[i]) == out_text );
+    REQUIRE( transformChar(upperalphabet_[i]) == out_text );
   }
   
 }

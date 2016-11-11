@@ -7,7 +7,7 @@
 //Tests check for correct responses given input.
 
 std::vector<std::string> testargs{};
-ProgramSettings settings { false, false, "", "", "", CipherMode::encrypt}; 
+ProgramSettings settings { false, false, "", "", "", CipherMode::Encrypt}; 
 
 TEST_CASE("User asks for help"){
 
@@ -28,14 +28,14 @@ TEST_CASE("Encrypt mode activated"){
   
   testargs = {"./mpags-cipher", "--encrypt"};
   processCommandLine(testargs, settings);
-  REQUIRE( settings.encrypt == CipherMode::encrypt  );
+  REQUIRE( settings.cipherMode == CipherMode::Encrypt  );
 }
 
-TEST_CASE("Decrypt mode deactivated"){
+TEST_CASE("Decrypt mode activated"){
   
   testargs = {"./mpags-cipher", "--decrypt"}; 
   processCommandLine(testargs, settings);
-  REQUIRE( settings.encrypt == CipherMode::decrypt  );
+  REQUIRE( settings.cipherMode == CipherMode::Decrypt  );
 }
 
 TEST_CASE("Key entered with no key specified"){
@@ -48,7 +48,7 @@ TEST_CASE("Key entered with key specified"){
   
   testargs = {"./mpags-cipher", "-k", "4"}; 
   processCommandLine(testargs, settings);
-  REQUIRE( settings.cipher_key == testargs[2]);
+  REQUIRE( settings.cipherKey == testargs[2]);
 }
 
 TEST_CASE("Input file declared without using input file"){

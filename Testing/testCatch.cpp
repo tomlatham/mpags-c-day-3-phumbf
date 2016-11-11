@@ -6,6 +6,6 @@ TEST_CASE("Addition works", "[math]") {
     REQUIRE (1 + 1 ==2);
 }
 
-TEST_CASE("Sub dont works", "[math]") {
-    REQUIRE (1 - 1 ==2);
+TEST_CASE("Subtraction works", "[math]") {
+    REQUIRE (1 - 1 ==0);
 }
